@@ -10,7 +10,7 @@ var upperCharacter = "ABCDEFHGIJKLMNOPQRSTUVWXYZ";
 var lowerCharacter = "abcdefghijklmnopqrstuvwxyz";
 var specialCharacter = "!@#$%^&*(){}[]=<>/,.";
 var number = "0123456789";
-var char = upperCharacter + lowerCharacter + specialCharacter + number;
+var char = '';
 
 var upper = window.confirm("Do you want to use UpperCase Character?");
 var lower = window.confirm("Do you want to use LowerCase Character?");
@@ -18,22 +18,19 @@ var special = window.confirm("Do you want to use SpecialCharacter?");
 var numbers = window.confirm("Do you want to use Number?");
 
 
-  if(!upper){
-     var char = lowerCharacter + specialCharacter + number;
-  }else if (!lower){
-    var char = upperCharacter + specialCharacter + number;
-  }else if(!special){
-    confirm("Do you want to use SpecialCharacter?")
-    var char = upperCharacter + lowerCharacter + number;
-  }else if(!numbers){
-    var char = upperCharacter + lowerCharacter + specialCharacter;
-  }else if(!upper && !lower && !special && !numbers){
-    alert("At least one type of character ")
-     confirm("Do you want to use UpperCase Character?")
-      confirm("Do you want to use LowerCase Character?")
-      confirm("Do you want to use SpecialCharacter?")
-     confirm("Do you want to use Number?")
-  }
+if(upper){
+  char += upperCharacter; 
+}
+if (lower){
+ char += lowerCharacter;
+}
+if(special){
+ char += specialCharacter;
+}
+if(numbers){
+  char += number;
+}
+
 
 
 
