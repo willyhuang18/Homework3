@@ -12,6 +12,12 @@ var upperCharacter = "ABCDEFHGIJKLMNOPQRSTUVWXYZ";
 var lowerCharacter = "abcdefghijklmnopqrstuvwxyz";
 var specialCharacter = "!@#$%^&*(){}[]=<>/,.";
 var number = "0123456789";
+var char = '';
+
+var upper = window.confirm("Do you want to use UpperCase Character?");
+var lower = window.confirm("Do you want to use LowerCase Character?");
+var special = window.confirm("Do you want to use SpecialCharacter?");
+var numbers = window.confirm("Do you want to use Number?");
 
 
 }
@@ -24,5 +30,4 @@ function writePassword() {
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", () => {
-writePassword();
 });
