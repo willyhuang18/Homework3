@@ -1,11 +1,12 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
 var length = window.prompt("Please choose length of 8 - 128 character for your password! ");
 while(length < 8 || length > 128 || isNaN(length)){
   length = window.prompt("Please Enter again, you Entered an invalid Character.");
 }
-
+function generatePassword(){ 
 var upperCharacter = "ABCDEFHGIJKLMNOPQRSTUVWXYZ";
 var lowerCharacter = "abcdefghijklmnopqrstuvwxyz";
 var specialCharacter = "!@#$%^&*(){}[]=<>/,.";
@@ -18,21 +19,23 @@ var special = window.confirm("Do you want to use SpecialCharacter?");
 var numbers = window.confirm("Do you want to use Number?");
 
 
-if(upper){
-  char += upperCharacter; 
+  if(upper){
+     char += upperCharacter; 
+  }
+   if (lower){
+    char += lowerCharacter;
+  }
+   if(special){
+    char += specialCharacter;
+  }
+   if(numbers){
+     char += number;
+  }
+  
+  if(!upper && !lower && !special && !numbers){
+    alert("At least one type of character ")
+  }
 }
-if (lower){
- char += lowerCharacter;
-}
-if(special){
- char += specialCharacter;
-}
-if(numbers){
-  char += number;
-}
-
-
-
 
 
 
