@@ -24,27 +24,35 @@ var numbers = window.confirm("Do you want to use Number?");
   if(upper){
      char += upperCharacter; 
   }
+
    if (lower){
     char += lowerCharacter;
   }
+
    if(special){
     char += specialCharacter;
   }
+
    if(numbers){
      char += number;
   }
   
+
   if(!upper && !lower && !special && !numbers){
+
     alert("At least one type of character ")
+
   return generatePassword();
+
   }
+
   var passwordText = '';
 
   for (var i = 0; i < length; i++) {
   
-      var rnum = Math.floor(Math.random() * char.length);
+      var num = Math.floor(Math.random() * char.length);
   
-      passwordText += char.substring(rnum,rnum+1);
+      passwordText += char.substring(num,num+1);
   
   }
   return passwordText;
