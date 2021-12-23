@@ -23,17 +23,16 @@ var numbers = window.confirm("Do you want to use Number?");
   }else if (!lower){
     var char = upperCharacter + specialCharacter + number;
   }else if(!special){
+    confirm("Do you want to use SpecialCharacter?")
     var char = upperCharacter + lowerCharacter + number;
   }else if(!numbers){
     var char = upperCharacter + lowerCharacter + specialCharacter;
-  }
-  
-  if(!upper && !lower && !special && !numbers){
+  }else if(!upper && !lower && !special && !numbers){
     alert("At least one type of character ")
-    confirm("Do you want to use UpperCase Character?")
-    confirm("Do you want to use LowerCase Character?")
-    confirm("Do you want to use SpecialCharacter?")
-    confirm("Do you want to use Number?")
+     confirm("Do you want to use UpperCase Character?")
+      confirm("Do you want to use LowerCase Character?")
+      confirm("Do you want to use SpecialCharacter?")
+     confirm("Do you want to use Number?")
   }
 
 
@@ -42,8 +41,16 @@ var numbers = window.confirm("Do you want to use Number?");
 
 // Write password to the #password input
 function writePassword() {
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
+  passwordText.value = password;
+  
+  for (var i=0; i<length; i++) {
+      var rnum = Math.floor(Math.random() * char.length);
+      passwordText += char.substring(rnum,rnum+1);
+  }
+  console.log(passwordText);
 }
 
 // Add event listener to generate button
